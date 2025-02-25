@@ -53,4 +53,4 @@ Aplicação Spring Boot para gerenciamento de produtos com integração Oracle D
 
 ## 🧪 Testes
 ### Executar todos os testes
-mvn test
+1. mvn test
