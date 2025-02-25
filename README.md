@@ -51,6 +51,6 @@ Aplicação Spring Boot para gerenciamento de produtos com integração Oracle D
 4. **Execução da Aplicação**
    mvn spring-boot:run
 
-### 🧪 Testes
-# Executar todos os testes
+## 🧪 Testes
+### Executar todos os testes
 mvn test
