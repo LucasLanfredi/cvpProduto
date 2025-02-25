@@ -46,6 +46,7 @@ Aplicação Spring Boot para gerenciamento de produtos com integração Oracle D
    1. src/main/resources/sql/create_user_database.sql
    2. src/main/resources/sql/create_entity.sql
    3. src/main/resources/sql/basic_values.sql
+   4. src/main/resources/sql/procedures.sql
 3. **Build do Projeto**
    mvn clean install -U
 4. **Execução da Aplicação**
