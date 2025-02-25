@@ -1,53 +1,56 @@
-# Desafio Java Spring Boot - API de Produtos
+# Desafio Java Spring Boot - API de Produtos 🚀
 
-Uma aplicação Spring Boot para gerenciamento de produtos, integrada ao Oracle Database, com documentação Swagger e comunicação entre serviços via Feign Client.
+Aplicação Spring Boot para gerenciamento de produtos com integração Oracle Database, documentação Swagger e comunicação entre serviços via Feign Client.
 
-## 📋 Funcionalidades Principais
+## 📌 Funcionalidades Principais
 
-- **API de Produtos**:
-  - `POST /api/produto/interno`: Cria um novo produto (com validação de dados via DTO).
-  - `GET /api/produto/interno`: Lista todos os produtos.
-  - Documentação Swagger integrada.
+### **API de Produtos**
+- `POST /api/produto/interno` - Cria novo produto com validação via DTO
+- `GET /api/produto/interno` - Lista todos os produtos cadastrados
+- Documentação Swagger integrada
 
-- **Integração com Oracle**:
-  - Utilização de JPA/Hibernate para operações CRUD.
-  - Package/Procedure/Function no Oracle (exemplo de uso de recursos avançados).
+### **Integração com Banco de Dados**
+- Oracle 21c XE para ambiente produtivo
+- H2 Database para testes de integração
+- Operações CRUD com JPA/Hibernate
+- Packages/Procedures/Functions no Oracle
 
-- **Serviço Feign Client**:
-  - Exemplo de comunicação entre serviços Spring Boot.
-  - `GET /api/produto/{id}`: Consulta produto via API externa.
+### **Testes Automatizados**
+- Testes de integração com banco em memória H2
+- Cobertura básica das principais funcionalidades
 
-- **Testes Automatizados**:
-  - Testes integração em um banco em memoria.
+## 🛠️ Tecnologias Utilizadas
 
-## 🚀 Tecnologias Utilizadas
+| Categoria          | Tecnologias                                                                 |
+|--------------------|-----------------------------------------------------------------------------|
+| **Backend**        | Java 17, Spring Boot 3.4.3, Spring Data JPA, Spring Cloud OpenFeign, Lombok |
+| **Banco de Dados** | Oracle 21c XE (produção), H2 (testes)                                       |
+| **Ferramentas**    | Maven, Swagger (OpenAPI 3), JUnit 5, Mockito                                |
 
-- **Backend**:
-  - Java 17
-  - Spring Boot 3.4.3
-  - Spring Data JPA
-  - Spring Cloud OpenFeign
-  - Lombok
-
-- **Banco de Dados**:
-  - Oracle 21c XE
-  - Scripts SQL para criação de objetos (Oracle)
-  - Banco H2 em memoria para teste
-
-- **Ferramentas**:
-  - Maven
-  - Swagger (OpenAPI 3)
-
-## ⚙️ Configuração do Ambiente
+## 🚀 Começando
 
 ### Pré-requisitos
-- Java 17
+- Java JDK 17
 - Maven 3.9+
-- Oracle Database 21c XE (ou Docker)
-- IDE (IntelliJ/Eclipse/VSCode)
+- Oracle Database 21c XE
+- IDE de sua preferência (IntelliJ/Eclipse/VSCode)
 
-### Passos para Execução
+### Configuração Inicial
 
-1. **Clone o repositório**:
+1. **Clone o repositório**
    ```bash
-   git clone [URL_DO_REPOSITÓRIO]
+   git clone https://github.com/LucasLanfredi/cvpProduto.git
+   cd cvpProduto
+2. **Configuração do Banco de Dados Oracle**
+   -- Execute na sequência:
+   1. src/main/resources/sql/create_user_database.sql
+   2. src/main/resources/sql/create_entity.sql
+   3. src/main/resources/sql/basic_values.sql
+3. **Build do Projeto**
+   mvn clean install -U
+4. **Execução da Aplicação**
+   mvn spring-boot:run
+
+### 🧪 Testes
+# Executar todos os testes
+mvn test
